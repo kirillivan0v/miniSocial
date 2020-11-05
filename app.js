@@ -32,7 +32,13 @@ function loadComponent(comp){
 loadComponent('user');
 
 
-setTimeout(() => {
+window.onload = function(){
     if(errorText)
         alert(errorText);
-}, 2000);
+    console.log('App.js onload work.');
+    let max = new User('Max', 'img/max.jpg', 'M', 'China', '10/01/1999', true);
+    max.render(document.body, 'lg');
+
+    let anna = new User('Anna', 'img/anna.jpg', 'F', 'America', '05/15/1992', false);
+    anna.render(document.body, 'lg');
+}
