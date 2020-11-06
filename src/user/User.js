@@ -57,7 +57,6 @@ class User{
                     
             }
 
-            console.log(root)
             root.appendChild(div);
     }
 }
