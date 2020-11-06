@@ -1,3 +1,5 @@
+// Засунуть всё в window onload для того чтобы ничего не сработало
+
 class User{
     constructor(nickname, avatar, gender, location, dob, online = null){
         this.nickname = nickname,
@@ -8,7 +10,7 @@ class User{
         this.online = online
     }
 
-    render(root, mode = 'sm'){
+    render(mode = 'sm', root = document.body){
 
         let div = document.createElement('div');
             div.className = `user-${mode}`;
@@ -55,6 +57,7 @@ class User{
                     
             }
 
+            console.log(root)
             root.appendChild(div);
     }
 }
