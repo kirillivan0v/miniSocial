@@ -4,7 +4,6 @@ function capitalize(str){
 
 let errorText = '';
 
-// Test push
 
 function loadComponent(comp){
 
