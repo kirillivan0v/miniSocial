@@ -1,8 +1,12 @@
 div[class^='user-']{
     width: min-content;
     display: inline-block;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     position: relative;
+
+    text-align: center;
+
+    width: min-content;
 }
 
 div[class^='user-'] img{

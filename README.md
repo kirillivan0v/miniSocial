@@ -3,6 +3,7 @@ Creating mini-social network
 
 
 #TODO 
-    null
+    Multi-search
+    Add event listeners with one callback
 
 Check: https://kirillivan0v.github.io/miniSocial/

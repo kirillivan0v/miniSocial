@@ -1,6 +1,6 @@
 let users = [];
 
-function generateFakeUser(i = 10)
+function generateFakeUser(i = 11)
 {
     console.log('%cSTARTING TESTS', 'color: red');
     while(--i)
@@ -15,7 +15,7 @@ function generateFakeUser(i = 10)
         )
 
         users.push(user);
-        user.render('lg', document.querySelector('.usersList'));
+        user.render('md', document.querySelector('.usersList'));
     }
     console.log(users);
     console.log('%cTESTS FINISHED', 'color: red');

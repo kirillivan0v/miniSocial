@@ -23,22 +23,36 @@ class Search
             input.addEventListener('focusout', function(e){resultBlock.style.display = "none"});
     }
 
-    onKeyDown(e){
+    onKeyDown(e)
+    {
         let resultBlock = document.querySelector('.resultBlock');
-                resultBlock.innerHTML = ''
+            resultBlock.innerHTML = ''
         
-        for(let i = 0; i < users.length; i++)
-        // if result block not null
-        {
-            if(users[i].nickname.toLowerCase().startsWith(e.target.value.toLowerCase()) && e.target.value.length >= 1)
-            {
-                let p = document.createElement('p');
-                    p.innerText = users[i].nickname;
+        // for(let i = 0; i < users.length; i++)
+        // // if result block not null
+        // {
+        //     if(users[i].nickname.toLowerCase().startsWith(e.target.value.toLowerCase()) && e.target.value.length >= 1)
+        //     {
+        //         let p = document.createElement('p');
+        //             p.innerText = users[i].nickname;
 
                 
-                resultBlock.appendChild(p);
-            }
-                         
+        //         resultBlock.appendChild(p);
+        //     }
+
+        // }
+
+        if(e.target.value.length >= 1)
+        {
+            users
+                .filter( user => user.nickname.toLowerCase().startsWith(e.target.value.toLowerCase()) )
+                .forEach( user => {
+                    let p = document.createElement('p');
+                    p.innerText = user.nickname;
+                    resultBlock.appendChild(p);
+                });
+
         }
     }
+
 }
