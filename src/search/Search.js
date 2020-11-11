@@ -92,7 +92,7 @@ class Search
             users
                 .filter( user => user.nickname.toLowerCase().startsWith(nameInput.value.toLowerCase()) ) // Name search
                 .filter( user => { // gender search
-                    if(selectGender.value == 'No selected'){
+                    if(selectGender.value != 'No selected'){
                         if(selectGender.value != 'another')   
                         {
                           if(user.gender.toLowerCase() == selectGender.value)
